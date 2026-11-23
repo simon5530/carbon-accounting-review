@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build immutable skill payloads or inspect a named public release. Never publish."""
 from pathlib import Path
-import argparse,hashlib,json,re,subprocess,sys,zipfile
+import argparse,datetime,hashlib,json,re,subprocess,sys,zipfile
 from check_repo import ROOT,PACKAGE,safe_paths,check
 SLUG='carbon-accounting-review';OWNER='simon5530';GENERATED={'skill-card.md'}
 
@@ -19,8 +19,12 @@ def source(ref=None):
     def read(path):return git('show',commit+':'+path) if commit else (ROOT/path).read_bytes()
     paths=safe_paths(json.loads(read('skill-files.json')))
     if commit:
-        listed=git('ls-tree','-r','--name-only',commit,'--',PACKAGE.as_posix()).decode().splitlines()
-        actual={name[len(PACKAGE.as_posix())+1:] for name in listed}
+        listed=git('ls-tree','-r',commit,'--',PACKAGE.as_posix()).decode().splitlines()
+        actual=set()
+        for row in listed:
+            metadata,name=row.split(chr(9),1);mode,kind,_=metadata.split()
+            if mode!='100644' or kind!='blob':raise ValueError('Git source contains a symlink or executable package file')
+            actual.add(name[len(PACKAGE.as_posix())+1:])
     else:actual={p.relative_to(ROOT/PACKAGE).as_posix() for p in (ROOT/PACKAGE).rglob('*') if p.is_file() or p.is_symlink()}
     if actual!=set(paths):raise ValueError('Source snapshot does not match package allowlist')
     blobs={name:read((PACKAGE/name).as_posix()) for name in paths}
@@ -37,10 +41,10 @@ def compare(local,remote):
     actual={v['path']:v['sha256'] for v in values if v['path'] not in GENERATED};expected={v['path']:v['sha256'] for v in local['files']}
     mismatch=sorted(n for n in set(actual)|set(expected) if actual.get(n)!=expected.get(n))
     if mismatch:raise ValueError('Registry content mismatch: '+', '.join(mismatch))
-    return {**local,'registryVerified':True,'registryGeneratedExcluded':sorted(v['path'] for v in values if v['path'] in GENERATED),'validationBoundary':'Exact published content identity only; not behavioral accuracy or security certification'}
+    return {**local,'registryVerified':True,'verifiedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'registryGeneratedExcluded':sorted(v['path'] for v in values if v['path'] in GENERATED),'validationBoundary':'Exact published content identity only; not behavioral accuracy or security certification'}
 
 def lookup(version):
-    try:p=subprocess.run(['clawhub','inspect',SLUG,'--version',version,'--files','--json'],check=True,capture_output=True,text=True,timeout=45)
+    try:p=subprocess.run(['clawhub','--no-input','inspect',SLUG,'--version',version,'--files','--json'],check=True,capture_output=True,text=True,timeout=45)
     except (OSError,subprocess.SubprocessError) as e:raise ValueError('Registry inspection unavailable; no publication or retry was attempted') from e
     try:return json.loads(p.stdout)
     except ValueError as e:raise ValueError('Registry inspection returned invalid JSON; not verified') from e

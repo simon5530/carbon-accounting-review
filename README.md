@@ -18,6 +18,10 @@ Local Git is the development source of truth. GitHub mirrors reviewed commits; C
 
 GitHub main and the latest registry release need not be identical between releases. At release time, compare the **same version, Git commit, file list and SHA-256 values**. Registry-generated skill-card.md is not maintained source.
 
+## Current development status (2026-11-23)
+
+main retains five already prepared, **Unreleased** documentation changes: explicit EU/jurisdiction boundaries and optional AI-assistance/human-review/report-audience statements. ClawHub remains 1.1.0. No new model/scenario validation, installed-host update or registry publication is implied.
+
 ## What the skill does
 
 - Trace boundaries, source coverage, factors, units, GWP basis and calculation evidence.

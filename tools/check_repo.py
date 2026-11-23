@@ -6,10 +6,10 @@ ROOT=Path(__file__).resolve().parents[1]
 PACKAGE=Path('skill/carbon-accounting-review')
 
 def safe_paths(values):
-    if not isinstance(values,list) or not values or len(set(values))!=len(values):
+    if not isinstance(values,list) or not values or not all(isinstance(v,str) for v in values) or len(set(values))!=len(values):
         raise ValueError('Invalid or duplicate package allowlist')
     for value in values:
-        if not isinstance(value,str) or value.startswith(('/', '-')) or '\\' in value or ':' in value or '..' in Path(value).parts:
+        if not value or value in {'.','..'} or value.startswith(('/', '-')) or '\\' in value or ':' in value or '..' in Path(value).parts:
             raise ValueError('Unsafe package path')
     return values
 

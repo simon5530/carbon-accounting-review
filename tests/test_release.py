@@ -35,7 +35,7 @@ class ReleaseContracts(unittest.TestCase):
         r=remote();r['version']['files'].append(r['version']['files'][0])
         with self.assertRaises(ValueError):release.compare(local(),r)
     def test_unsafe_paths(self):
-        for name in ['../private','/outside','x/../../secret','C:secret','x\\secret','-option']:
+        for name in ['','.', '../private','/outside','x/../../secret','C:secret','x\\secret','-option']:
             with self.subTest(path=name),self.assertRaises(ValueError):safe_paths([name])
     def test_duplicate_allowlist(self):
         with self.assertRaises(ValueError):safe_paths(['x','x'])
@@ -56,6 +56,14 @@ class ReleaseContracts(unittest.TestCase):
             result=release.pack('1.2.0','test-ref')
             with zipfile.ZipFile(Path(t)/result['zip']) as z:self.assertEqual(set(z.namelist()),set(blobs))
             self.assertFalse(result['published']);lookup.assert_not_called()
+    def test_git_snapshot_rejects_symlink_mode(self):
+        def fake(*args):
+            if args[0]=='show':return b'["SKILL.md"]'
+            if args[0]=='ls-tree':return b'120000 blob aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\tskill/carbon-accounting-review/SKILL.md\n'
+            raise AssertionError(args)
+        with patch.object(release,'commit_for',return_value='a'*40),patch.object(release,'git',side_effect=fake):
+            with self.assertRaises(ValueError):release.source('snapshot')
+
     def test_pack_refuses_dirty_tree(self):
         with patch.object(release,'check'),patch.object(release,'git',return_value=b' M SKILL.md'):
             with self.assertRaises(ValueError):release.pack('1.2.0','HEAD')

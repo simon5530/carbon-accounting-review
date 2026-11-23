@@ -1,0 +1,20 @@
+[
+  "CHANGELOG.md",
+  "GOVERNANCE.md",
+  "LICENSE",
+  "README.md",
+  "SECURITY.md",
+  "SKILL.md",
+  "examples/README.md",
+  "examples/ai-governance-cases.json",
+  "examples/disclosure.json",
+  "examples/expected-findings.md",
+  "examples/inventory.json",
+  "examples/negative-cases.json",
+  "references/ai-governance.md",
+  "references/method-review.md",
+  "references/public-disclosures.md",
+  "references/sources.md",
+  "templates/ai-governance-addendum.md",
+  "templates/review-report.md"
+]

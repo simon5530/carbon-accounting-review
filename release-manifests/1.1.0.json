@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "slug": "carbon-accounting-review",
+  "owner": "simon5530",
+  "version": "1.1.0",
+  "sourceStatus": "Reconstructed and verified byte-for-byte against the already published registry version; not the original publishing Git commit",
+  "verifiedAt": "2026-11-23",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "size": 1324,
+      "sha256": "2ddb08633c3ea0a35eae692d4b8f9a2fefef3dd777ad29ac5f30e7d9733d2059"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "size": 2878,
+      "sha256": "4ccf2f2c895a888691af8ff110474d1115168bf1eb92d7afd3a2ffcf8995c52c"
+    },
+    {
+      "path": "LICENSE",
+      "size": 906,
+      "sha256": "423b70b92436f59e45f1c86ba26e548356480df24ed7a062480e643526b2abc2"
+    },
+    {
+      "path": "README.md",
+      "size": 6530,
+      "sha256": "eca2e00a012948b9e1c129bff9521be3adcd60f2d3c6f1e1886ac2eabe1ffb3c"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 2958,
+      "sha256": "016d88e9ef51de19885150841628aee550c968568dda81313c0780f1be0fade1"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 7554,
+      "sha256": "5900e069d9ec272953bc059a85133e0646e30f966e8d09a01ea0e524c3781b9c"
+    },
+    {
+      "path": "examples/README.md",
+      "size": 1341,
+      "sha256": "bece1eafcfcacf81fc274871cb54edfffcb2888e057b1ed36ee82079c0ef14da"
+    },
+    {
+      "path": "examples/ai-governance-cases.json",
+      "size": 5743,
+      "sha256": "2eb52725ee255bfb75a9b222b008738d56d3b7c2e0a2bfffc52ebd5ef5936647"
+    },
+    {
+      "path": "examples/disclosure.json",
+      "size": 521,
+      "sha256": "7d01ee97b0ba60fb7f37744d7a193cccddd9deefe45fca45e4bf9f41bf000d81"
+    },
+    {
+      "path": "examples/expected-findings.md",
+      "size": 2422,
+      "sha256": "f33780d53c93f7fcee78ad4efaa612c4acb718d7c6d8449572a6e7e2121f233e"
+    },
+    {
+      "path": "examples/inventory.json",
+      "size": 2317,
+      "sha256": "1809eed42ece071adb70c814cf654ec4637f501106fa8e800501e2f9e8252118"
+    },
+    {
+      "path": "examples/negative-cases.json",
+      "size": 1456,
+      "sha256": "9bc497a6379ebba3dfb7947b29b38b1c76606e6589ef9905a1ad88e995e9e417"
+    },
+    {
+      "path": "references/ai-governance.md",
+      "size": 10567,
+      "sha256": "4f827703ee3bf0a040ed00798d0195fe82eb6fb2381526f94a1f8ebd95bf319c"
+    },
+    {
+      "path": "references/method-review.md",
+      "size": 1778,
+      "sha256": "904225a7a617d3e1633684e1825649b984e4269f92f3d68cc2f1a27c9e5de204"
+    },
+    {
+      "path": "references/public-disclosures.md",
+      "size": 1725,
+      "sha256": "795110a54b260b214ea84e1e001fe44ff0a4d456dcf8fa2e75e0d424ffe1d7f0"
+    },
+    {
+      "path": "references/sources.md",
+      "size": 2163,
+      "sha256": "6bdf8f98174e263f32c17f7b1d6c169dba295718863b1a26192de4a3833c01e6"
+    },
+    {
+      "path": "templates/ai-governance-addendum.md",
+      "size": 1436,
+      "sha256": "f673c2b0e926de50fb3ebf0bfcdddaadf4821be1bb49df32d9f38684e85b8103"
+    },
+    {
+      "path": "templates/review-report.md",
+      "size": 2274,
+      "sha256": "3c5e872175c91e9d54f717412916f71df21957e7c1c88d1b01be92ee90531e5d"
+    }
+  ],
+  "registryGeneratedExcluded": [
+    "skill-card.md"
+  ],
+  "validationBoundary": "Content identity only, not security certification or behavioral accuracy"
+}

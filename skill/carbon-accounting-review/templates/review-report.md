@@ -33,5 +33,19 @@ Statuses: PASS = this named check supported; ISSUE = observed inconsistency; NOT
 - Checks completed vs untested branches:
 - This is a bounded review, not legal advice, third-party assurance, certification or proof of emissions reductions.
 
+## Optional AI-assistance and review-status statement
+
+Use only when relevant to the agreed report purpose/audience. This is a factual editorial transparency option, NOT a claim that every report legally requires an AI label. Do not automatically publish it or disclose sensitive processing details.
+
+- Report destination: internal / external draft / intended public publication / unknown:
+- AI involvement: used / not used (only with supporting evidence) / unknown; functions actually used (extraction, classification, estimation, calculation support, recommendation, drafting, other):
+- Tool/model/version: only if observed and appropriate to disclose; otherwise unknown/not disclosed:
+- Human-review status: not reviewed / partially reviewed / completed for the stated checks / unknown:
+- Verified human-review scope, evidence/locator, date and authorized reviewer role (no unnecessary personal details):
+- Editorial/publication responsibility, if actually established; otherwise unknown:
+- Remaining checks and release/approval limits:
+
+Render an audience-appropriate statement only from those verified facts. Do not assert that AI was absent, that an independent human reviewed the report, or that publication is approved when evidence does not establish it. Model self-review is not human review. Keep AI assistance, GHG-method findings, human-review status and legal disclosure applicability as separate conclusions.
+
 ## 6. Optional AI workflow review
 If applicable, attach the [AI-governance addendum](ai-governance-addendum.md). Keep carbon calculation, model explanation, human review and legal applicability verdicts separate. Otherwise mark this branch NOT REVIEWED/out of scope.

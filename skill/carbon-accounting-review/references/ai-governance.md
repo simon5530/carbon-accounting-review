@@ -1,16 +1,24 @@
 # AI-assisted carbon workflows: transparency and explanation
 
+**Jurisdiction boundary:** The legal provisions and dated snapshot below cover the EU only. They are not a global AI-law checklist.
+
 Use this branch ONLY when an authorized carbon-review engagement includes an AI-enabled tool, AI-generated publication, or an explicit AI-governance question. Ordinary inventory arithmetic does not become a regulated AI system merely because software is used. This is a scoping and evidence aid, not legal advice, conformity assessment, certification or a substitute for carbon methodology.
 
 ## 1. Gate scope and roles
+First record the applicable jurisdiction(s) and evidence of each market/use/output nexus. If an EU nexus is unknown, mark EU applicability NOT ASSESSABLE; if no EU trigger is established on the stated facts, mark the named EU checks NOT REVIEWED for that reason, not globally exempt or compliant. Non-EU or mixed-jurisdiction work needs a separate, specifically scoped official-source check; if not authorized or not performed, retain those legal questions as NOT REVIEWED and continue the authorized GHG review. Do not expand this branch into an automatic worldwide legal survey.
+
+Personal/non-professional activity, open-source licensing and editorial review are not universal waivers: assess the actual role, activity and exact jurisdiction-specific exception. An individual doing professional work is not automatically a private user, and an open-source component does not clear the downstream service.
+
 Record review date; intended purpose and actual workflow; whether an AI system is established on the facts; EU market/use/output nexus; provider, deployer and affected-party roles; placement/use dates; and the responsible human. A text instruction package is not by itself proof of a deployed AI system. Buying an AI service and supplying an own-brand AI system can carry different roles. If facts are missing, use NOT ASSESSABLE, not a blanket legal PASS. Do not expand data/account access to resolve a legal question.
 
 ## Mandatory gate before judging any duty
 
-For EACH candidate duty, decide in this order: **actor role → exact use/content trigger → applicable date/exception → observed evidence**. Never skip a gate.
+For EACH candidate duty, decide in this order: **jurisdiction/nexus → actor role → exact use/content trigger → applicable date/exception → observed evidence**. Never skip a gate.
 
 | Gate | Required handling |
 |---|---|
+| Jurisdiction/nexus is not established | Do not assign EU or other-law duties by default. Preserve the missing facts and continue independently authorized GHG checks. |
+| A non-EU context is being reviewed | Do not reuse EU personal-use/open-source/editorial exceptions as local-law clearance. Keep any separate legal review within its authorized scope. |
 | Enterprise is ONLY a deployer | Do not impose provider50(1)/(2) checks on it. Note a separate vendor question only if requested; absent vendor evidence is not this customer's breach. |
 | People merely read a publication | That is NOT direct interaction with an AI system. Do not add50(1) just because text was AI-generated. |
 | A provider makes synthetic text but publication by a deployer is not established | Assess50(2); do not invent a50(4) publication scenario or a direct chatbot interaction. |
@@ -49,7 +57,10 @@ A deterministic carbon calculation can be reproducible while an AI narrative is 
 
 The amended2026/1744recital41 expressly says the relevant Codes do not grant a presumption of conformity; no Code signature supplies conclusive compliance evidence.
 
-Use the [AI governance addendum](../templates/ai-governance-addendum.md) with the ordinary report. Name each assessed duty/exception, role, effective date, observed evidence, remaining uncertainty and action. Do not fill unknown facts with a compliance statement. A draft that lacks substantive review must not be described as approved; a required source/consent/privacy boundary is a real blocker. Do not publish, transmit private evidence, install monitoring, alter tools or claim instrumented runtime enforcement merely because this branch recommends a control.
+Use the [AI governance addendum](../templates/ai-governance-addendum.md) with the ordinary report. Offer the ordinary report's optional AI-assistance statement where relevant: distinguish AI functions, actual human-review status/scope and internal versus external audience. Unknown participation/review facts stay unknown; an AI reviewing its own output is not human review. Do not convert this editorial transparency option into a claim that every report legally requires an AI label. Name each assessed duty/exception, role, effective date, observed evidence, remaining uncertainty and action. Do not fill unknown facts with a compliance statement. A draft that lacks substantive review must not be described as approved; a required source/consent/privacy boundary is a real blocker. Do not publish, transmit private evidence, install monitoring, alter tools or claim instrumented runtime enforcement merely because this branch recommends a control.
+
+## Optional comparative learning reference
+[AI transparency, open source and deployment responsibility](https://github.com/simon5530/applied-agent-systems/blob/main/docs/AI_TRANSPARENCY_OPEN_SOURCE.md) is an optional learning/discovery aid, not controlling legal authority or a live compliance database. Inspect the relevant official law and current applicability only within separately authorized scope; this link grants no browsing or data-disclosure permission.
 
 ## Primary sources
 - Authentic original AI Act: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng

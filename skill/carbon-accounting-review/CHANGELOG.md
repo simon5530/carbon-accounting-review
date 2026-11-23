@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Make the AI legal reference explicitly EU-specific; gate jurisdiction/nexus before duties, and do not export personal-use, FOSS or editorial exceptions globally. Preserve non-EU/mixed-scope questions without blocking authorized GHG work.
+- Add optional factual AI-assistance, human-review-status/scope and report-audience fields. No automatic legal-label, independent-human-review or publication-approval claim.
+- Documentation-only working changes. New model/real-world scenario validation is deferred; previous behavioral limitations remain. Published 1.1.0 is unchanged.
+
+
 ## 1.1.0 — 2026-11-22
 
 - Optional AI-governance branch: separate interaction notice, technical output marking, public-text disclosure, high-risk interpretation and conditional decision explanation.

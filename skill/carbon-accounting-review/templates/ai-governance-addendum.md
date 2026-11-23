@@ -4,7 +4,9 @@ Use only when AI workflow/governance is in the authorized review scope. This is 
 
 ## Applicability
 - As-of date and inspected authentic law/amendment/guidance; legal status versus interpretation:
-- AI function / intended use / EU nexus / placement date:
+- Applicable jurisdiction(s) / market-use-output nexus / supporting facts; EU nexus established, not established or unknown:
+- AI function / intended use / placement date:
+- EU reference applicability versus any separately authorized non-EU review; unknown facts / NOT ASSESSABLE and unreviewed scope / NOT REVIEWED:
 - Provider / deployer / affected-party roles:
 - High-risk classification basis or missing facts (not inferred from the carbon/product label):
 
@@ -22,6 +24,8 @@ A text-review exception is not a waiver of other marking/notice duties. Readines
 ## Evidence chain
 - Inputs/factors/calculation replay and source completeness:
 - AI version, function, explanation fidelity/stability and uncertainty limits:
+- AI-assistance functions and internal/external/publication audience (see optional statement in the ordinary report):
+- Actual human-review status and verified scope/date/evidence; do not assume completion:
 - Substantive human review/editorial responsibility/override and final rationale:
 - Data minimization, actual processing destination/retention, untested safeguards:
 - Separate carbon-method, AI-governance and legal/professional-review conclusions:
